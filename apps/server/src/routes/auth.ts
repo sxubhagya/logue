@@ -1,10 +1,10 @@
-import { Router, Request, Response } from 'express';
+import { Router as ExpressRouter, Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { query } from '../config/database';
 import { User, UserCredentials, AuthToken } from '@logue/shared';
 
-const router = Router();
+const router: ExpressRouter = ExpressRouter();
 
 // Register a new user
 router.post('/register', async (req: Request, res: Response) => {

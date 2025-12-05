@@ -1,9 +1,9 @@
-import { Router, Response } from 'express';
+import { Router as ExpressRouter, Response } from 'express';
 import { query } from '../config/database';
 import { AuthRequest, authenticateToken } from '../middleware/auth';
 import { Document, DocumentMetadata } from '@logue/shared';
 
-const router = Router();
+const router: ExpressRouter = ExpressRouter();
 
 // Get all documents for the authenticated user
 router.get('/', authenticateToken, async (req: AuthRequest, res: Response) => {

@@ -34,7 +34,8 @@ const wss = new WebSocketServer({
 });
 
 // Set up y-websocket server
-import { setupWSConnection } from 'y-websocket/bin/utils';
+// Note: y-websocket doesn't have TypeScript declarations
+const { setupWSConnection } = require('y-websocket/bin/utils');
 
 wss.on('connection', (ws, req) => {
   console.log('WebSocket connection established');

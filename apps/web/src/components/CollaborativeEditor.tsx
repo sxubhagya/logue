@@ -7,7 +7,6 @@ import CollaborationCursor from '@tiptap/extension-collaboration-cursor';
 import * as Y from 'yjs';
 import { WebsocketProvider } from 'y-websocket';
 import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
 
 interface CollaborativeEditorProps {
   documentId: string;
